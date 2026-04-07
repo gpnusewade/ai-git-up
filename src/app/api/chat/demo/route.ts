@@ -1,0 +1,160 @@
+import { NextRequest } from 'next/server';
+import { createUIMessageStream, createUIMessageStreamResponse } from 'ai';
+
+// 模拟数据 - 基于 test/test.ts
+const simulateData = [
+  { type: 'text-start', id: 'txt-0' },
+  { type: 'text-delta', id: 'txt-0', delta: '您好' },
+  { type: 'text-delta', id: 'txt-0', delta: '！' },
+  { type: 'text-delta', id: 'txt-0', delta: '我' },
+  { type: 'text-delta', id: 'txt-0', delta: '理解' },
+  { type: 'text-delta', id: 'txt-0', delta: '您' },
+  { type: 'text-delta', id: 'txt-0', delta: '正在' },
+  { type: 'text-delta', id: 'txt-0', delta: '发烧' },
+  { type: 'text-delta', id: 'txt-0', delta: '39' },
+  { type: 'text-delta', id: 'txt-0', delta: '°' },
+  { type: 'text-delta', id: 'txt-0', delta: 'C' },
+  { type: 'text-delta', id: 'txt-0', delta: '，' },
+  { type: 'text-delta', id: 'txt-0', delta: '症状' },
+  { type: 'text-delta', id: 'txt-0', delta: '持续' },
+  { type: 'text-delta', id: 'txt-0', delta: '了一天' },
+  { type: 'text-delta', id: 'txt-0', delta: '，' },
+  { type: 'text-delta', id: 'txt-0', delta: '目前' },
+  { type: 'text-delta', id: 'txt-0', delta: '在香港' },
+  { type: 'text-delta', id: 'txt-0', delta: '。' },
+  { type: 'text-delta', id: 'txt-0', delta: '这' },
+  { type: 'text-delta', id: 'txt-0', delta: '确实' },
+  { type: 'text-delta', id: 'txt-0', delta: '需要' },
+  { type: 'text-delta', id: 'txt-0', delta: '及时' },
+  { type: 'text-delta', id: 'txt-0', delta: '就医' },
+  { type: 'text-delta', id: 'txt-0', delta: '。\n\n' },
+  { type: 'text-delta', id: 'txt-0', delta: '**' },
+  { type: 'text-delta', id: 'txt-0', delta: '重要' },
+  { type: 'text-delta', id: 'txt-0', delta: '提醒' },
+  { type: 'text-delta', id: 'txt-0', delta: '**' },
+  { type: 'text-delta', id: 'txt-0', delta: '：' },
+  { type: 'text-delta', id: 'txt-0', delta: '我' },
+  { type: 'text-delta', id: 'txt-0', delta: '是一名' },
+  { type: 'text-delta', id: 'txt-0', delta: '客服' },
+  { type: 'text-delta', id: 'txt-0', delta: '代表' },
+  { type: 'text-delta', id: 'txt-0', delta: '，' },
+  { type: 'text-delta', id: 'txt-0', delta: '不是' },
+  { type: 'text-delta', id: 'txt-0', delta: '医生' },
+  { type: 'text-delta', id: 'txt-0', delta: '，' },
+  { type: 'text-delta', id: 'txt-0', delta: '无法' },
+  { type: 'text-delta', id: 'txt-0', delta: '提供' },
+  { type: 'text-delta', id: 'txt-0', delta: '医疗' },
+  { type: 'text-delta', id: 'txt-0', delta: '诊断' },
+  { type: 'text-delta', id: 'txt-0', delta: '或' },
+  { type: 'text-delta', id: 'txt-0', delta: '治疗' },
+  { type: 'text-delta', id: 'txt-0', delta: '建议' },
+  { type: 'text-delta', id: 'txt-0', delta: '。' },
+  { type: 'text-delta', id: 'txt-0', delta: '高' },
+  { type: 'text-delta', id: 'txt-0', delta: '烧' },
+  { type: 'text-delta', id: 'txt-0', delta: '39' },
+  { type: 'text-delta', id: 'txt-0', delta: '°' },
+  { type: 'text-delta', id: 'txt-0', delta: 'C' },
+  { type: 'text-delta', id: 'txt-0', delta: '需要' },
+  { type: 'text-delta', id: 'txt-0', delta: '专业' },
+  { type: 'text-delta', id: 'txt-0', delta: '医疗' },
+  { type: 'text-delta', id: 'txt-0', delta: '评估' },
+  { type: 'text-delta', id: 'txt-0', delta: '。\n\n' },
+  { type: 'text-delta', id: 'txt-0', delta: '让我' },
+  { type: 'text-delta', id: 'txt-0', delta: '为您' },
+  { type: 'text-delta', id: 'txt-0', delta: '推荐' },
+  { type: 'text-delta', id: 'txt-0', delta: '香港' },
+  { type: 'text-delta', id: 'txt-0', delta: '的' },
+  { type: 'text-delta', id: 'txt-0', delta: '医生' },
+  { type: 'text-delta', id: 'txt-0', delta: '。' },
+  { type: 'text-delta', id: 'txt-0', delta: '根据' },
+  { type: 'text-delta', id: 'txt-0', delta: '您' },
+  { type: 'text-delta', id: 'txt-0', delta: '提供' },
+  { type: 'text-delta', id: 'txt-0', delta: '的信息' },
+  { type: 'text-delta', id: 'txt-0', delta: '：\n\n' },
+  { type: 'text-delta', id: 'txt-0', delta: '-' },
+  { type: 'text-delta', id: 'txt-0', delta: ' ' },
+  { type: 'text-delta', id: 'txt-0', delta: '症状' },
+  { type: 'text-delta', id: 'txt-0', delta: '：' },
+  { type: 'text-delta', id: 'txt-0', delta: '发烧' },
+  { type: 'text-delta', id: 'txt-0', delta: '39' },
+  { type: 'text-delta', id: 'txt-0', delta: '°' },
+  { type: 'text-delta', id: 'txt-0', delta: 'C' },
+  { type: 'text-delta', id: 'txt-0', delta: '，' },
+  { type: 'text-delta', id: 'txt-0', delta: '持续' },
+  { type: 'text-delta', id: 'txt-0', delta: '一天' },
+  { type: 'text-delta', id: 'txt-0', delta: '\n' },
+  { type: 'text-delta', id: 'txt-0', delta: '-' },
+  { type: 'text-delta', id: 'txt-0', delta: ' ' },
+  { type: 'text-delta', id: 'txt-0', delta: '地点' },
+  { type: 'text-delta', id: 'txt-0', delta: '：' },
+  { type: 'text-delta', id: 'txt-0', delta: '香港' },
+  {
+    type: 'tool-input-start',
+    toolCallId: 'call_00_cpxcM0qW8S95Z2YjSFIseeap',
+    toolName: 'recommend_doctors',
+  },
+  {
+    type: 'tool-input-delta',
+    toolCallId: 'call_00_cpxcM0qW8S95Z2YjSFIseeap',
+    inputTextDelta: '{"location": "香港", "symptoms": "发烧39°C，持续一天"}',
+  },
+  {
+    type: 'tool-input-available',
+    toolCallId: 'call_00_cpxcM0qW8S95Z2YjSFIseeap',
+    toolName: 'recommend_doctors',
+    input: { location: '香港', symptoms: '发烧39°C，持续一天' },
+  },
+  { type: 'text-end', id: 'txt-0' },
+  {
+    type: 'tool-output-available',
+    toolCallId: 'call_00_cpxcM0qW8S95Z2YjSFIseeap',
+    result: {
+      doctors: [
+        {
+          id: 'doc-008',
+          name: '周婷',
+          department: '儿科',
+          title: '主任医师',
+          hospital: '北京儿童医院',
+          location: '香港',
+          rating: 4.9,
+          availableSlots: ['2026-04-05 09:30', '2026-04-06 08:00', '2026-04-07 11:00'],
+          distance: '5.5km',
+          specialties: ['小儿感冒', '小儿消化不良', '儿童过敏'],
+        },
+      ],
+    },
+  },
+  { type: 'finish', finishReason: 'tool-calls' },
+];
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    const { messages } = body;
+
+    if (!messages || !Array.isArray(messages) || messages.length === 0) {
+      return new Response(
+        JSON.stringify({ error: 'Missing or invalid messages' }),
+        { status: 400, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
+    const stream = createUIMessageStream({
+      execute: async ({ writer }) => {
+        for (const event of simulateData) {
+          await new Promise((resolve) => setTimeout(resolve, 50));
+          writer.write(event as Parameters<typeof writer.write>[0]);
+        }
+      },
+    });
+
+    return createUIMessageStreamResponse({ stream });
+  } catch (error) {
+    console.error('demo.error', error);
+    return new Response(
+      JSON.stringify({ error: error instanceof Error ? error.message : 'Demo chat failed' }),
+      { status: 500, headers: { 'Content-Type': 'application/json' } }
+    );
+  }
+}
