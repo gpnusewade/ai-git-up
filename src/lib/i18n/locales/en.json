@@ -1,0 +1,157 @@
+{
+  "app": {
+    "title": "Text Style Imitation Tool",
+    "description": "AI-Powered Text Style Transfer Tool"
+  },
+  "common": {
+    "confirm": "Confirm",
+    "close": "Close",
+    "settings": "Settings",
+    "toggleTheme": "Toggle theme",
+    "delete": "Delete {name}",
+    "clickToSelect": "click to select"
+  },
+  "settings": {
+    "title": "Settings",
+    "provider": "Provider",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "Enter API Key",
+    "model": "Model",
+    "baseUrl": "Base URL (Optional)",
+    "baseUrlPlaceholder": "Leave blank to use default",
+    "rewriteParams": "Rewrite Params",
+    "temperature": "Temperature",
+    "maxTokens": "Max Tokens"
+  },
+  "input": {
+    "section": "Input",
+    "sampleText": "Sample Text",
+    "sampleTextNote": "(Style Source)",
+    "samplePlaceholder": "Enter text to analyze the writing style...",
+    "targetText": "Target Text",
+    "targetTextNote": "(To Rewrite)",
+    "targetPlaceholder": "Enter text you want to rewrite in the target style...",
+    "analyze": "Analyze Style",
+    "analyzing": "Analyzing...",
+    "rewrite": "Rewrite",
+    "processing": "Processing..."
+  },
+  "results": {
+    "section": "Results",
+    "styleAnalysis": "Style Analysis",
+    "tone": "Tone",
+    "length": "Length",
+    "perspective": "Perspective",
+    "vocabulary": "Vocabulary",
+    "sentencePatterns": "Sentence Patterns",
+    "characteristics": "Overall Characteristics",
+    "rewriteResult": "Rewrite Result",
+    "emptyState": "Results will appear here after analysis or rewrite"
+  },
+  "errors": {
+    "noSampleText": "Please enter or upload sample text",
+    "noApiKey": "Please configure your API Key in settings first",
+    "noTargetText": "Please enter both sample text and target text",
+    "textTooShort": "Input text must be at least 100 characters, currently {count}",
+    "targetTextTooShort": "Target text must be at least 100 characters, currently {count}",
+    "analysisFailed": "Analysis failed",
+    "rewriteFailed": "Rewrite failed",
+    "unsupportedFileType": "Unsupported file type: {name}",
+    "fileTooLarge": "File too large: {name} (max 5MB)",
+    "readFileFailed": "Failed to read file {name}",
+    "readFileFailedGeneric": "Failed to read file"
+  },
+  "upload": {
+    "dragText": "Drag files here, or",
+    "reading": "Reading..."
+  },
+  "languages": {
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "en": "English"
+  },
+  "feedback": {
+    "title": "Rate this Result",
+    "rate": "Rate",
+    "submit": "Submit Rating",
+    "submitting": "Submitting...",
+    "submitFailed": "Submission failed, please try again",
+    "thankYou": "Thank you for your feedback!",
+    "submitted": "Rating has been submitted successfully",
+    "comment": "Comment (optional)",
+    "commentPlaceholder": "Share your experience or suggestions...",
+    "dimensions": {
+      "accuracy": "Accuracy",
+      "usefulness": "Usefulness",
+      "detail": "Level of Detail",
+      "quality": "Rewrite Quality",
+      "styleMatch": "Style Match",
+      "readability": "Readability",
+      "reportQuality": "Report Quality",
+      "practicality": "Practicality",
+      "imitationQuality": "Imitation Quality"
+    }
+  },
+  "simulate": {
+    "title": "Style Analysis & Simulation",
+    "description": "Deeply analyze writing style and generate imitation reports",
+    "styleSourceText": "Style Source Text",
+    "styleSourceNote": "(Style reference source)",
+    "styleSourcePlaceholder": "Enter the reference text for style analysis...",
+    "targetText": "Target Text",
+    "targetNote": "(Optional, content to imitate)",
+    "targetPlaceholder": "Enter the content to rewrite (leave blank for analysis only)...",
+    "analyzeAndSimulate": "Analyze & Simulate",
+    "analyzeOnly": "Analyze Only",
+    "analyzing": "Analyzing...",
+    "reportSection": "Analysis Report",
+    "emptyState": "Style analysis report and simulation results will appear here",
+    "copyReport": "Copy Report",
+    "copied": "Copied",
+    "streaming": "Generating..."
+  },
+  "donate": {
+    "title": "Buy Me a Coffee",
+    "message": "If this tool has been helpful to you, feel free to buy me a coffee ☕",
+    "wechat": "WeChat"
+  },
+  "maintenance": {
+    "title": "System Maintenance",
+    "description": "We are currently performing system upgrades and maintenance. Please check back later. Thank you for your patience!",
+    "status": "Under maintenance, coming back soon..."
+  },
+  "chat": {
+    "title": "AI Chat",
+    "welcome": "Hi, how can I help you?",
+    "welcomeHint": "Type a message to start chatting",
+    "inputPlaceholder": "Type a message...",
+    "send": "Send",
+    "stop": "Stop generating",
+    "error": "Sorry, something went wrong. Please try again."
+  },
+  "medical": {
+    "welcome": "Hello, I'm your medical service assistant",
+    "welcomeHint": "Please describe your symptoms or health concerns, and I'll recommend suitable doctors and resources",
+    "greeting": "Hello! I'm your medical service assistant and can help you with:",
+    "inputPlaceholder": "Describe your symptoms or health concerns...",
+    "send": "Send",
+    "stop": "Stop generating",
+    "error": "Sorry, something went wrong. Please try again.",
+    "emergency": {
+      "banner": "If this is an emergency, please call emergency services immediately",
+      "call": "Call 911"
+    },
+    "tool": {
+      "processing": "Searching for relevant information...",
+      "searching": "Searching for medical resources...",
+      "doctorResult": "Based on your symptoms and location, here are recommended doctors:",
+      "insuranceResult": "Based on your situation, here are recommended insurance plans:",
+      "contactResult": "Here are our contact details. Feel free to reach out anytime:"
+    },
+    "quickActions": {
+      "findDoctor": "Find a Doctor",
+      "appointDoctor": "Book Appointment",
+      "prescriptionDelivery": "Prescription Delivery"
+    }
+  }
+}

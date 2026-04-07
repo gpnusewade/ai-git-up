@@ -1,0 +1,157 @@
+{
+  "app": {
+    "title": "文字风格模仿工具",
+    "description": "AI驱动的文字风格迁移工具"
+  },
+  "common": {
+    "confirm": "确定",
+    "close": "关闭",
+    "settings": "设置",
+    "toggleTheme": "切换主题",
+    "delete": "删除 {name}",
+    "clickToSelect": "点击选择"
+  },
+  "settings": {
+    "title": "参数设置",
+    "provider": "Provider",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "Enter API Key",
+    "model": "Model",
+    "baseUrl": "Base URL (可选)",
+    "baseUrlPlaceholder": "留空使用默认地址",
+    "rewriteParams": "Rewrite Params",
+    "temperature": "Temperature",
+    "maxTokens": "Max Tokens"
+  },
+  "input": {
+    "section": "输入",
+    "sampleText": "示例文字",
+    "sampleTextNote": "(风格来源)",
+    "samplePlaceholder": "输入一段文字，作为风格分析的来源...",
+    "targetText": "目标文字",
+    "targetTextNote": "(需要改写)",
+    "targetPlaceholder": "输入需要改写风格的文字...",
+    "analyze": "分析风格",
+    "analyzing": "分析中...",
+    "rewrite": "改写",
+    "processing": "处理中..."
+  },
+  "results": {
+    "section": "结果",
+    "styleAnalysis": "风格分析",
+    "tone": "语气",
+    "length": "篇幅",
+    "perspective": "人称",
+    "vocabulary": "词汇特征",
+    "sentencePatterns": "句式特点",
+    "characteristics": "整体特点",
+    "rewriteResult": "改写结果",
+    "emptyState": "分析或改写后结果显示在这里"
+  },
+  "errors": {
+    "noSampleText": "请输入或上传示例文字",
+    "noApiKey": "请先在设置中配置 API Key",
+    "noTargetText": "请输入示例文字和目标文字",
+    "textTooShort": "输入文本至少需要100字，当前 {count} 字",
+    "targetTextTooShort": "目标文本至少需要100字，当前 {count} 字",
+    "analysisFailed": "分析失败",
+    "rewriteFailed": "改写失败",
+    "unsupportedFileType": "不支持的文件类型: {name}",
+    "fileTooLarge": "文件过大: {name}（最大 5MB）",
+    "readFileFailed": "读取文件 {name} 失败",
+    "readFileFailedGeneric": "读取文件失败"
+  },
+  "upload": {
+    "dragText": "拖拽文件到此处，或",
+    "reading": "读取中..."
+  },
+  "languages": {
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "en": "English"
+  },
+  "feedback": {
+    "title": "为结果评分",
+    "rate": "评分",
+    "submit": "提交评分",
+    "submitting": "提交中...",
+    "submitFailed": "提交失败，请重试",
+    "thankYou": "感谢你的反馈！",
+    "submitted": "评分已成功提交",
+    "comment": "留言（可选）",
+    "commentPlaceholder": "分享你的使用体验或建议...",
+    "dimensions": {
+      "accuracy": "准确性",
+      "usefulness": "实用性",
+      "detail": "详细程度",
+      "quality": "改写质量",
+      "styleMatch": "风格匹配度",
+      "readability": "可读性",
+      "reportQuality": "报告质量",
+      "practicality": "实用性",
+      "imitationQuality": "仿写质量"
+    }
+  },
+  "simulate": {
+    "title": "风格分析与仿写",
+    "description": "深度分析文案风格，并生成仿写报告",
+    "styleSourceText": "风格源文案",
+    "styleSourceNote": "(被分析的风格来源)",
+    "styleSourcePlaceholder": "请输入需要分析风格的参考文案...",
+    "targetText": "目标文案",
+    "targetNote": "(可选，需要仿写的内容)",
+    "targetPlaceholder": "请输入需要仿写的原始内容（留空则仅生成分析报告）...",
+    "analyzeAndSimulate": "分析并仿写",
+    "analyzeOnly": "仅分析风格",
+    "analyzing": "分析中...",
+    "reportSection": "分析报告",
+    "emptyState": "提交后将显示风格分析报告和仿写结果",
+    "copyReport": "复制报告",
+    "copied": "已复制",
+    "streaming": "生成中..."
+  },
+  "donate": {
+    "title": "打赏支持",
+    "message": "如果觉得工具对你有帮助，欢迎请作者喝杯咖啡 ☕",
+    "wechat": "微信打赏"
+  },
+  "maintenance": {
+    "title": "系统维护中",
+    "description": "我们正在进行系统升级和维护，请稍后再回来访问。感谢您的耐心等待！",
+    "status": "正在维护，即将恢复..."
+  },
+  "chat": {
+    "title": "AI 对话",
+    "welcome": "你好，有什么可以帮你？",
+    "welcomeHint": "输入消息开始对话",
+    "inputPlaceholder": "输入消息...",
+    "send": "发送",
+    "stop": "停止生成",
+    "error": "抱歉，出现了一些问题，请重试。"
+  },
+  "medical": {
+    "welcome": "您好，我是医疗客服助手",
+    "welcomeHint": "请描述您的症状或健康问题，我将为您推荐合适的医生和资源",
+    "greeting": "您好！我是您的医疗客服助手，可以为您提供以下服务：",
+    "inputPlaceholder": "描述您的症状或健康问题...",
+    "send": "发送",
+    "stop": "停止生成",
+    "error": "抱歉，出现了一些问题，请重试。",
+    "emergency": {
+      "banner": "如情况紧急，请立即拨打急救电话",
+      "call": "拨打 120"
+    },
+    "tool": {
+      "processing": "正在为您查询相关信息...",
+      "searching": "正在搜索医疗资源...",
+      "doctorResult": "根据您的症状和位置，为您推荐以下医生：",
+      "insuranceResult": "根据您的情况，为您推荐以下保险方案：",
+      "contactResult": "以下是客服联系方式，您可以随时联系我们："
+    },
+    "quickActions": {
+      "findDoctor": "找医生",
+      "appointDoctor": "预约医生",
+      "prescriptionDelivery": "处方配送"
+    }
+  }
+}

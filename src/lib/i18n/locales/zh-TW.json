@@ -1,0 +1,157 @@
+{
+  "app": {
+    "title": "文字風格模仿工具",
+    "description": "AI驅動的文字風格遷移工具"
+  },
+  "common": {
+    "confirm": "確定",
+    "close": "關閉",
+    "settings": "設定",
+    "toggleTheme": "切換主題",
+    "delete": "刪除 {name}",
+    "clickToSelect": "點擊選擇"
+  },
+  "settings": {
+    "title": "參數設定",
+    "provider": "Provider",
+    "apiKey": "API Key",
+    "apiKeyPlaceholder": "Enter API Key",
+    "model": "Model",
+    "baseUrl": "Base URL（選填）",
+    "baseUrlPlaceholder": "留空使用預設地址",
+    "rewriteParams": "Rewrite Params",
+    "temperature": "Temperature",
+    "maxTokens": "Max Tokens"
+  },
+  "input": {
+    "section": "輸入",
+    "sampleText": "範例文字",
+    "sampleTextNote": "（風格來源）",
+    "samplePlaceholder": "輸入一段文字，作為風格分析的來源...",
+    "targetText": "目標文字",
+    "targetTextNote": "（需要改寫）",
+    "targetPlaceholder": "輸入需要改寫風格的文字...",
+    "analyze": "分析風格",
+    "analyzing": "分析中...",
+    "rewrite": "改寫",
+    "processing": "處理中..."
+  },
+  "results": {
+    "section": "結果",
+    "styleAnalysis": "風格分析",
+    "tone": "語氣",
+    "length": "篇幅",
+    "perspective": "人稱",
+    "vocabulary": "詞彙特徵",
+    "sentencePatterns": "句式特點",
+    "characteristics": "整體特點",
+    "rewriteResult": "改寫結果",
+    "emptyState": "分析或改寫後結果顯示在這裡"
+  },
+  "errors": {
+    "noSampleText": "請輸入或上傳範例文字",
+    "noApiKey": "請先在設定中配置 API Key",
+    "noTargetText": "請輸入範例文字和目標文字",
+    "textTooShort": "輸入文本至少需要100字，當前 {count} 字",
+    "targetTextTooShort": "目標文本至少需要100字，當前 {count} 字",
+    "analysisFailed": "分析失敗",
+    "rewriteFailed": "改寫失敗",
+    "unsupportedFileType": "不支援的檔案類型: {name}",
+    "fileTooLarge": "檔案過大: {name}（最大 5MB）",
+    "readFileFailed": "讀取檔案 {name} 失敗",
+    "readFileFailedGeneric": "讀取檔案失敗"
+  },
+  "upload": {
+    "dragText": "拖曳檔案到此處，或",
+    "reading": "讀取中..."
+  },
+  "languages": {
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "en": "English"
+  },
+  "feedback": {
+    "title": "為結果評分",
+    "rate": "評分",
+    "submit": "提交評分",
+    "submitting": "提交中...",
+    "submitFailed": "提交失敗，請重試",
+    "thankYou": "感謝你的反饋！",
+    "submitted": "評分已成功提交",
+    "comment": "留言（選填）",
+    "commentPlaceholder": "分享你的使用體驗或建議...",
+    "dimensions": {
+      "accuracy": "準確性",
+      "usefulness": "實用性",
+      "detail": "詳細程度",
+      "quality": "改寫品質",
+      "styleMatch": "風格匹配度",
+      "readability": "可讀性",
+      "reportQuality": "報告品質",
+      "practicality": "實用性",
+      "imitationQuality": "仿寫品質"
+    }
+  },
+  "simulate": {
+    "title": "風格分析與仿寫",
+    "description": "深度分析文案風格，並生成仿寫報告",
+    "styleSourceText": "風格源文案",
+    "styleSourceNote": "(被分析的風格來源)",
+    "styleSourcePlaceholder": "請輸入需要分析風格的參考文案...",
+    "targetText": "目標文案",
+    "targetNote": "(選填，需要仿寫的內容)",
+    "targetPlaceholder": "請輸入需要仿寫的原始內容（留空則僅生成分析報告）...",
+    "analyzeAndSimulate": "分析並仿寫",
+    "analyzeOnly": "僅分析風格",
+    "analyzing": "分析中...",
+    "reportSection": "分析報告",
+    "emptyState": "提交後將顯示風格分析報告和仿寫結果",
+    "copyReport": "複製報告",
+    "copied": "已複製",
+    "streaming": "生成中..."
+  },
+  "donate": {
+    "title": "打賞支持",
+    "message": "如果覺得工具對你有幫助，歡迎請作者喝杯咖啡 ☕",
+    "wechat": "微信打賞"
+  },
+  "maintenance": {
+    "title": "系統維護中",
+    "description": "我們正在進行系統升級和維護，請稍後再回來訪問。感謝您的耐心等待！",
+    "status": "正在維護，即將恢復..."
+  },
+  "chat": {
+    "title": "AI 對話",
+    "welcome": "你好，有什麼可以幫你？",
+    "welcomeHint": "輸入訊息開始對話",
+    "inputPlaceholder": "輸入訊息...",
+    "send": "發送",
+    "stop": "停止生成",
+    "error": "抱歉，出現了一些問題，請重試。"
+  },
+  "medical": {
+    "welcome": "您好，我是醫療客服助手",
+    "welcomeHint": "請描述您的症狀或健康問題，我將為您推薦合適的醫生和資源",
+    "greeting": "您好！我是您的醫療客服助手，可以為您提供以下服務：",
+    "inputPlaceholder": "描述您的症狀或健康問題...",
+    "send": "發送",
+    "stop": "停止生成",
+    "error": "抱歉，出現了一些問題，請重試。",
+    "emergency": {
+      "banner": "如情況緊急，請立即撥打急救電話",
+      "call": "撥打 120"
+    },
+    "tool": {
+      "processing": "正在為您查詢相關資訊...",
+      "searching": "正在搜尋醫療資源...",
+      "doctorResult": "根據您的症狀和位置，為您推薦以下醫生：",
+      "insuranceResult": "根據您的情況，為您推薦以下保險方案：",
+      "contactResult": "以下是客服聯絡方式，您可以隨時聯繫我們："
+    },
+    "quickActions": {
+      "findDoctor": "找醫生",
+      "appointDoctor": "預約醫生",
+      "prescriptionDelivery": "處方配送"
+    }
+  }
+}
